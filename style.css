@@ -197,7 +197,10 @@
   font-size: 15px;
 }
 
-.s-left,
+.s-left {
+  display: flex;
+  gap: 25px;
+}
 .s-right {
   display: flex;
   gap: 25px;
@@ -246,7 +249,7 @@ banner img {
   width: 100%;
   height: 200px;
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   gap: 15px;               
   margin: 20px 0;
 overflow:hidden;
@@ -264,10 +267,7 @@ position: relative;
   display: block;
   object-fit:cover;
   position: relative;
-
-
 }
-
 .main img:hover {
   transform: scale(1.02);   
 }
@@ -281,10 +281,6 @@ position: relative;
   font-size: 24px;
   padding: 10px;
   cursor: pointer;
-
-
-  
- 
 }
 
 .chevron-btn.left {
@@ -308,7 +304,7 @@ position: relative;
     animation-duration: 2s;
     animation-delay: 1s;
     animation-iteration-count: 3;
-    overflow: hidden;
+    overflow: none;
 
 }
 .img3 {
@@ -316,7 +312,7 @@ position: relative;
     height: 300px;
     width: 1220px;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: none;
 }
 
 
@@ -376,12 +372,125 @@ position: relative;
 
 }
 
-.h2 {
-    margin-top: 30px;
-    margin-left: 40px;
-    font-size: x-large;
-    width: 300px;
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 30px 20px 20px;
+    color: #222;
 }
-.t1{
-  display: flex;
+
+.card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.movie-card {
+    width: 200px;
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.rating {
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 0 0 10px 10px;
+    margin-top: -4px;
+}
+
+.movie-card h3 {
+    font-size: 18px;
+    margin: 10px 0 4px 8px;
+    font-weight: bold;
+    color: #222;
+}
+
+.movie-card .genre {
+    font-size: 14px;
+    color: #777;
+    margin: 0 0 10px 8px;
+}
+
+/* .card::-webkit-scrollbar {
+    height: 8px;
+}
+.card::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+.card::-webkit-scrollbar-track {
+    background: #f2f2f2;
+} */
+
+
+.trending {
+    background: #f8f8f8;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.trending h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+    /* text-align: center; */
+}
+
+
+.trending-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.trend-card {
+    width: 150px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.trend-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+.trend-card .title {
+    color: #ff2e63;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.trend-card .type {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
 }
